@@ -25,6 +25,7 @@ header {
       header .header-container .header-image-container .social-link {
         display: block;
         position: absolute;
+        z-index: 2000;
         top: 5px;
         right: 20px;
         width: 100px;
@@ -48,12 +49,18 @@ header {
         header .header-container .nav-menu .nav-link:hover {
           color: #b6212c;
           cursor: pointer; }
-  header .shadow-block {
+  header .shadow-block-container {
+    z-index: 1100;
+    overflow: hidden;
     position: absolute;
-    top: -100px;
-    height: 100px;
-    width: 100%;
-    box-shadow: 0 0 85px 0 #000000; }
+    height: 80%;
+    width: 100%; }
+    header .shadow-block-container .shadow-block {
+      position: absolute;
+      top: -100px;
+      height: 100px;
+      width: 100%;
+      box-shadow: 0 0 85px 0 #000000; }
 
 @media screen and (max-width: 1420px) {
   header {
@@ -225,7 +232,7 @@ header {
 
 @media screen and (max-width: 460px) {
   .footer-wrapper .footer-content .footer-contacts-info {
-    width: 245px;
+    width: 280px;
     text-align: center; }
     .footer-wrapper .footer-content .footer-contacts-info span {
       display: block;

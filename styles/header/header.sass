@@ -26,6 +26,7 @@ header
       .social-link
         display: block
         position: absolute
+        z-index: 2000
         top: 5px
         right: 20px
         width: 100px
@@ -51,12 +52,19 @@ header
           color: #b6212c
           cursor: pointer
 
-  .shadow-block
+  .shadow-block-container
+    z-index: 1100
+    overflow: hidden
     position: absolute
-    top: -100px
-    height: 100px
+    height: 80%
     width: 100%
-    box-shadow: 0 0 85px 0 #000000
+
+    .shadow-block
+      position: absolute
+      top: -100px
+      height: 100px
+      width: 100%
+      box-shadow: 0 0 85px 0 #000000
 
 @media screen and (max-width: 1420px)
   header
